@@ -27,7 +27,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def navigation_fragment = '1.0.0'
     def material_version = '1.1.0'
     def glide = "4.11.0"
