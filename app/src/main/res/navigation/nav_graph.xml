@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/callsFragment">
+
+    <fragment
+        android:id="@+id/callsFragment"
+        android:name="com.example.whatsapp.fragments.CallsFragment"
+        android:label="@string/text_menu_calls"
+        tools:layout="@layout/fragment_calls" />
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.example.whatsapp.fragments.ChatsFragment"
+        android:label="@string/text_menu_chats"
+        tools:layout="@layout/fragment_chats" >
+        <action
+            android:id="@+id/action_chatsFragment_to_viewMyMessagesFragment"
+            app:destination="@id/viewMyMessagesFragment"
+            app:popUpTo="@id/chatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.whatsapp.fragments.ContactsFragment"
+        android:label="@string/text_menu_contacts"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/photoFragment"
+        android:name="com.example.whatsapp.fragments.PhotoFragment"
+        android:label="@string/text_menu_photo"
+        tools:layout="@layout/fragment_photo" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.whatsapp.fragments.MoreFragment"
+        android:label="@string/text_menu_more"
+        tools:layout="@layout/fragment_more" />
+    <fragment
+        android:id="@+id/viewMyMessagesFragment"
+        android:name="com.example.whatsapp.fragments.ViewMyMessagesFragment"
+        android:label="{name}"
+        tools:layout="@layout/fragment_view_my_messages" >
+        <argument
+            android:name="icon"
+            app:argType="integer" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+</navigation>

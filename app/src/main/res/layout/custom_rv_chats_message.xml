@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/chatsScreenContactsCardBackground"
+    app:cardElevation="@dimen/material_dimen_small_ldpi"
+    app:cardPreventCornerOverlap="false"
+    android:layout_marginEnd="@dimen/material_dimen_mdpi"
+    android:layout_marginStart="@dimen/material_dimen_mdpi"
+    app:contentPadding="0dp"
+    android:layout_marginBottom="@dimen/material_dimen_mdpi"
+    app:cardCornerRadius="@dimen/material_dimen_ldpi">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/material_dimen_ldpi">
+
+        <ImageView
+            android:id="@+id/imageViewCustomRVChatsContact"
+            android:layout_width="@dimen/material_dimen_xxxhdpi"
+            android:layout_height="@dimen/material_dimen_xxxhdpi"
+            android:src="@drawable/status_eight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewViewCustomRVChatsContactName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_dimen_small_ldpi"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/textViewViewCustomRVChatsContactTime"
+            app:layout_constraintStart_toEndOf="@id/imageViewCustomRVChatsContact"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewViewCustomRVChatsContactTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewViewCustomRVChatsContactName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewcustomRVChatsMessageTypeImage"
+            android:layout_width="@dimen/material_dimen_hdpi"
+            android:layout_height="@dimen/material_dimen_hdpi"
+            android:src="@drawable/ic_message_delivered"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewCustomRVChatsContact"
+            app:layout_constraintTop_toBottomOf="@id/textViewViewCustomRVChatsContactName"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/imageViewCustomRVChatsMessageStatus"
+            android:layout_width="@dimen/material_dimen_hdpi"
+            android:layout_height="@dimen/material_dimen_hdpi"
+            android:src="@drawable/ic_message_delivered"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toEndOf="@id/imageViewcustomRVChatsMessageTypeImage"
+            app:layout_constraintTop_toBottomOf="@id/textViewViewCustomRVChatsContactName" />
+
+        <TextView
+            android:id="@+id/textViewViewCustomRVChatsContactMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_dimen_small_ldpi"
+            android:text="@string/app_name"
+            android:textColor="@color/hintTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageViewCustomRVChatsNewMessageCount"
+            app:layout_constraintStart_toEndOf="@id/imageViewCustomRVChatsMessageStatus"
+            app:layout_constraintTop_toBottomOf="@+id/textViewViewCustomRVChatsContactName" />
+
+        <ImageView
+            android:id="@+id/imageViewCustomRVChatsNewMessageCount"
+            android:layout_width="@dimen/material_dimen_xhdpi"
+            android:layout_height="@dimen/material_dimen_xhdpi"
+            android:src="@drawable/ic_circle"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewViewCustomRVChatsContactMessage"
+            app:layout_constraintTop_toBottomOf="@id/textViewViewCustomRVChatsContactName" />
+
+        <TextView
+            android:id="@+id/textNewMessagesCountNumber"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/material_dimen_small_ldpi"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewCustomRVChatsNewMessageCount"
+            app:layout_constraintEnd_toEndOf="@id/imageViewCustomRVChatsNewMessageCount"
+            app:layout_constraintStart_toStartOf="@id/imageViewCustomRVChatsNewMessageCount"
+            app:layout_constraintTop_toTopOf="@id/imageViewCustomRVChatsNewMessageCount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

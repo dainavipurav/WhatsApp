@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ViewMyMessagesFragment">
+
+    <TextView
+        android:id="@+id/textViewViewMyMessagesTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_dimen_mdpi"
+        android:gravity="center"
+        android:text="NOVEMBER 29,2019"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewViewMyMessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/footer_section"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewViewMyMessagesTime" />
+
+
+    <LinearLayout
+        android:id="@+id/footer_section"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/material_dimen_ldpi"
+        android:layout_marginTop="@dimen/material_dimen_ldpi"
+        android:layout_marginBottom="@dimen/material_dimen_ldpi"
+        android:padding="@dimen/material_dimen_small_ldpi"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_edittext"
+        style="@style/AppTheme.LinearLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/floatingActionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewViewMyMessages"
+        app:layout_constraintVertical_bias="1">
+
+        <ImageView
+            android:id="@+id/emoticons_button"
+            android:layout_width="@dimen/material_dimen_xhdpi"
+            android:layout_height="@dimen/material_dimen_xhdpi"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/material_dimen_small_ldpi"
+            android:src="@drawable/ic_emoji" />
+
+        <EditText
+            android:id="@+id/message_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:inputType="textMultiLine"
+            android:cursorVisible="false"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:maxLines="4"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/attachment_button"
+            android:layout_width="@dimen/material_dimen_hdpi"
+            android:layout_height="@dimen/material_dimen_hdpi"
+            android:layout_margin="@dimen/material_dimen_ldpi"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_attachment" />
+
+        <ImageView
+            android:id="@+id/camera_button"
+            android:layout_width="@dimen/material_dimen_hdpi"
+            android:layout_height="@dimen/material_dimen_hdpi"
+            android:layout_margin="@dimen/material_dimen_ldpi"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_photo" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="@dimen/material_dimen_xlarge"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginStart="@dimen/material_dimen_ldpi"
+        android:layout_marginEnd="@dimen/material_dimen_ldpi"
+        android:layout_marginTop="@dimen/material_dimen_mdpi"
+        android:layout_marginBottom="@dimen/material_dimen_mdpi"
+        android:backgroundTint="@android:color/white"
+        android:textAlignment="center"
+        android:src="@drawable/ic_voice_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/footer_section"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewViewMyMessages" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

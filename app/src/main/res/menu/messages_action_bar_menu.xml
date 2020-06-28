@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_video"
+        android:title="@string/text_menu_calls"
+        app:showAsAction="always"/>
+
+    <item
+        android:icon="@drawable/ic_call"
+        android:title="@string/text_menu_calls"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="View Contact"/>
+
+    <item
+        android:title="Media, links and docs"/>
+
+    <item
+        android:title="Search"/>
+
+    <item
+        android:title="Mute Notifications"/>
+
+    <item
+        android:title="Wallpaper"/>
+
+
+</menu>

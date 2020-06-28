@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:background="@color/screenBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChatsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/constraintLayoutChats"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewChatsStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <View
+            android:id="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewChatsStatus"
+            android:background="@color/lastSeenColor"
+            android:layout_margin="@dimen/material_dimen_small_ldpi"
+            android:layout_width="0dp"
+            android:layout_height="1dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewChatsType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/material_dimen_ldpi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewChatsMessages"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/material_dimen_ldpi"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewChatsType"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineChatsStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineChatsEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineChatsTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineChatsBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

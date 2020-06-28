@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F8F8F8</color>
+    <color name="colorPrimaryDark">#E6E6E6</color>
+    <color name="colorAccent">#DDDDDD</color>
+
+    <color name="hintTextColor">#b2babe</color>
+    <color name="green">#13BD23</color>
+
+    <color name="black">#343454</color>
+    <color name="dividerColor">#F7F7F7</color>
+
+    <color name="lastSeenColor">#b8bfc2</color>
+    <color name="chipBackground">#F7F7F7</color>
+    <color name="drawableAssetsColor">#909CA1</color>
+
+    <color name="chatsScreenContactsCardBackground">#FDFDFD</color>
+
+    <color name="screenBackground">#F3F4F6</color>
+
+    <color name="message_out">#c5ebca</color>
+</resources>

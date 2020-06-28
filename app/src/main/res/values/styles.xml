@@ -1,0 +1,35 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.BottomNavigation" >
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="elevation">@dimen/material_dimen_small_ldpi</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="itemIconTint">@drawable/bottom_navigation_colors</item>
+        <item name="itemTextColor">@drawable/bottom_navigation_colors</item>
+    </style>
+
+
+    <style name="AppTheme.LinearLayout">
+        <item name="shapeAppearance">@dimen/material_dimen_mdpi</item>
+        <item name="cornerRadius">@dimen/material_dimen_mdpi</item>
+    </style>
+
+    <style name="AppTheme.EditText">
+        <item name="android:cursorVisible">false</item>
+        <item name="android:track">@color/colorPrimary</item>
+        <item name="background">@android:color/transparent</item>
+
+
+
+    </style>
+
+</resources>
